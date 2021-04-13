@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSE 870 Prototpye</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a
+        href="https://docs.google.com/document/d/16cAUFVX6sWO6uMJiES5LPPDyGRZZ3_-BG8i2_L968AU/edit?usp=sharing">SRS</a>
+    </li>
+    <li><a
+        href="https://docs.google.com/document/d/178LR5lIOp8XKDPF92DXzC7X4lxCJg_KQZfqUA2nDOQs/edit?usp=sharing">Sequence
+        Diagram</a></li>
+    <li><a
+        href="https://docs.google.com/document/d/18SOlU6I_FowkWHY0pY-oSaeE0ImGWToZNjsSWNXNLz0/edit?usp=sharing">Domain
+        Model</a></li>
+  </ul>
+
+  <video width="400" height="225" buffer="auto"
+    poster="https://s3-sa-east-1.amazonaws.com/personaltech/codepen/poster.png" style="background: #000;"
+    id="car-video">
+    <source src="https://india.rso.msu.edu/Reverse.mp4" type="video/mp4">
+    <p>Does your browser not play videos from websites? </p>
+  </video>
+  <div class="speed-button-container">
+    <button onclick=VideoSpeedControl(1)>5 mph</button>
+    <button onclick=VideoSpeedControl(2)>12 mph</button>
+    <button onclick=manualOverride()>Manual Override</button>
+    <button onclick=changeVideo()>Change Video</button>
+    <button onclick="turnLeft()">Left Turn Signal</button>
+    <button onclick="turnRight()">Right Turn Signal</button>
+  </div>
+  <br>
+
+  <!-- partial:index.partial.html -->
+  <div id="arrow" class="arrow">
+    <img src="images/arrow.gif" alt="arrow">
+  </div>
+  <div class="knob-surround">
+
+    <div class="knob"></div>
+
+    <span class="min">Min</span>
+    <span class="max">Max</span>
+
+    <div class="ticks">
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+      <div class="tick"></div>
+    </div>
+  </div>
+
+  <button id="pause" class="speed"><img src="images/brake.png" width="200" height="200" /></button>
+  <button id="play" class="speed"><img src="images/gas.png" width="200" height="200" /></button>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
